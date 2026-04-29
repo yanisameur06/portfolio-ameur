@@ -164,7 +164,7 @@ export function Home() {
                   Téléchargez mon CV complet pour découvrir mon parcours, mes compétences et mes réalisations.
                 </p>
                 <a
-                  href="/src/imports/CV_Yanis_Ameur.pdf"
+                  href="/CV_Yanis_Ameur.pdf"
                   download="CV_Yanis_Ameur.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:from-blue-500 hover:to-cyan-500 transition-all shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/60"
                 >
