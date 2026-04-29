@@ -270,12 +270,12 @@ export function Experience() {
                   {/* Procedures Grid */}
                   <div className="grid md:grid-cols-2 gap-4">
                     {[
-                      { name: "Configuration Switch CBS350", file: "/src/imports/Procédure_CBS350.pdf" },
-                      { name: "Configuration Routeur en Point d'Accès WiFi", file: "/src/imports/procédure_routeur.pdf" },
-                      { name: "Installation et Configuration Zabbix", file: "/src/imports/Installation_Zabbix.pdf" },
-                      { name: "Configuration Switch Cisco 2960", file: "/src/imports/Procédure_switch_2960.pdf" },
-                      { name: "Configuration Active Directory et DNS", file: "/src/imports/Procédure_AD-DNS.pdf" },
-                      { name: "Installation et Configuration Proxmox", file: "/src/imports/procédure_proxmox.pdf" },
+                      { name: "Configuration Switch CBS350", file: "/Procédure_CBS350.pdf" },
+                      { name: "Configuration Routeur en Point d'Accès WiFi", file: "/procédure_routeur.pdf" },
+                      { name: "Installation et Configuration Zabbix", file: "/Installation_Zabbix.pdf" },
+                      { name: "Configuration Switch Cisco 2960", file: "/Procédure_switch_2960.pdf" },
+                      { name: "Configuration Active Directory et DNS", file: "/Procédure_AD-DNS.pdf" },
+                      { name: "Installation et Configuration Proxmox", file: "/procédure_proxmox.pdf" },
                     ].map((procedure, index) => (
                       <div
                         key={index}
