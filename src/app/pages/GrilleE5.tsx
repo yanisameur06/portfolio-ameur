@@ -115,7 +115,7 @@ export function GrilleE5() {
 
                 {/* Download Button */}
                 <a
-                  href="/src/imports/Grille_E5_Yanis_Ameur-1.pdf"
+                  href="/Grille_E5_Yanis_Ameur-1.pdf"
                   download
                   className="flex-shrink-0 group/btn relative"
                 >
@@ -142,7 +142,7 @@ export function GrilleE5() {
             </div>
             <div className="w-full" style={{ height: '800px' }}>
               <iframe
-                src="/src/imports/Grille_E5_Yanis_Ameur-1.pdf"
+                src="/Grille_E5_Yanis_Ameur-1.pdf"
                 className="w-full h-full"
                 title="Grille E5 - Yanis Ameur"
               />
