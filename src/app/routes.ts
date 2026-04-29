@@ -7,6 +7,8 @@ import { Projets } from "./pages/Projets";
 import { VeilleTechnologique } from "./pages/VeilleTechnologique";
 import { Experience } from "./pages/Experience";
 import { Outils } from "./pages/Outils";
+import { ProjetGSB } from "./pages/ProjetGSB";
+import { GrilleE5 } from "./pages/GrilleE5";
 
 export const router = createBrowserRouter([
   {
@@ -16,9 +18,11 @@ export const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "competences", Component: Competences },
       { path: "projets", Component: Projets },
+      { path: "projet-gsb", Component: ProjetGSB },
       { path: "experience", Component: Experience },
       { path: "outils", Component: Outils },
       { path: "veille-technologique", Component: VeilleTechnologique },
+      { path: "grille-e5", Component: GrilleE5 },
       { path: "a-propos", Component: APropos },
     ],
   },

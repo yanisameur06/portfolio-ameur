@@ -1,4 +1,4 @@
-import { Building2, Target, FileText } from "lucide-react";
+import { Building2, Target, FileText, Download } from "lucide-react";
 import { useState } from "react";
 
 export function Experience() {
@@ -29,20 +29,20 @@ export function Experience() {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-12 relative">
-          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-          <h1 className="text-6xl font-bold mb-6 relative">
+          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-slide-down opacity-0"></div>
+          <h1 className="text-6xl font-bold mb-6 relative animate-slide-up opacity-0 animation-delay-100">
             <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent animate-pulse">
               Mon Expérience
             </span>
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mt-8">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mt-8 animate-fade-in opacity-0 animation-delay-200">
             Parcours professionnel et académique acquis durant ma formation
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="mb-12">
+        <div className="mb-12 animate-scale-in opacity-0 animation-delay-300">
           <div className="flex flex-wrap gap-4 justify-center">
             {tabs.map((tab) => {
               const Icon = tab.icon;
@@ -264,22 +264,18 @@ export function Experience() {
                     <h2 className="text-3xl font-bold text-white">Procédures Techniques</h2>
                   </div>
                   <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                    Documentation des procédures réalisées durant mon alternance <span className="text-cyan-400 font-semibold">(10 procédures)</span>
+                    Documentation des procédures réalisées durant mon alternance <span className="text-cyan-400 font-semibold">(6 procédures)</span>
                   </p>
 
                   {/* Procedures Grid */}
-                  <div className="grid md:grid-cols-2 gap-4 mb-8">
+                  <div className="grid md:grid-cols-2 gap-4">
                     {[
-                      "Procédure création de VM Windows Server 2025",
-                      "Procédure configuration réseau en PowerShell",
-                      "Procédure joindre une VM au domaine et configuration réseau (Windows Server 2025)",
-                      "Procédure installation DHCP",
-                      "Procédure installation service fichier",
-                      "Procédure installation service mail Exchange",
-                      "Procédure installation PingCastle",
-                      "Procédure installation HardenAD",
-                      "Procédure deployment OS avec WAPT",
-                      "Procédure télécharger, créer ou mettre à jour un paquet avec WAPT",
+                      { name: "Configuration Switch CBS350", file: "/src/imports/Procédure_CBS350.pdf" },
+                      { name: "Configuration Routeur en Point d'Accès WiFi", file: "/src/imports/procédure_routeur.pdf" },
+                      { name: "Installation et Configuration Zabbix", file: "/src/imports/Installation_Zabbix.pdf" },
+                      { name: "Configuration Switch Cisco 2960", file: "/src/imports/Procédure_switch_2960.pdf" },
+                      { name: "Configuration Active Directory et DNS", file: "/src/imports/Procédure_AD-DNS.pdf" },
+                      { name: "Installation et Configuration Proxmox", file: "/src/imports/procédure_proxmox.pdf" },
                     ].map((procedure, index) => (
                       <div
                         key={index}
@@ -291,20 +287,20 @@ export function Experience() {
                           </div>
                           <div className="flex-1">
                             <p className="text-gray-200 text-sm leading-relaxed group-hover:text-white transition-colors">
-                              {procedure}
+                              {procedure.name}
                             </p>
                           </div>
+                          <a
+                            href={procedure.file}
+                            download
+                            className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center border border-cyan-500/40 hover:border-cyan-400/70 hover:bg-cyan-500/30 transition-all group-hover:scale-110"
+                            title="Télécharger la procédure"
+                          >
+                            <Download className="w-4 h-4 text-cyan-400" />
+                          </a>
                         </div>
                       </div>
                     ))}
-                  </div>
-
-                  {/* Note */}
-                  <div className="bg-blue-500/10 rounded-xl p-4 border border-blue-500/30 backdrop-blur-sm">
-                    <p className="text-gray-300 text-center flex items-center justify-center gap-2">
-                      <FileText className="w-5 h-5 text-cyan-400" />
-                      <span className="text-cyan-400 font-semibold">Les fichiers de procédures seront ajoutés prochainement</span>
-                    </p>
                   </div>
                 </div>
               </div>

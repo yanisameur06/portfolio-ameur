@@ -10,9 +10,11 @@ export function Layout() {
     { path: "/", label: "Accueil" },
     { path: "/competences", label: "Compétences" },
     { path: "/projets", label: "Projets" },
+    { path: "/projet-gsb", label: "Projet GSB" },
     { path: "/experience", label: "Expérience" },
     { path: "/outils", label: "Outils" },
     { path: "/veille-technologique", label: "Veille" },
+    { path: "/grille-e5", label: "Grille E5" },
     { path: "/a-propos", label: "À Propos" },
   ];
 

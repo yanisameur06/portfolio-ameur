@@ -6,18 +6,18 @@ export function APropos() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4">
+          <h1 className="text-5xl font-bold mb-4 animate-slide-down opacity-0">
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               À Propos de Moi
             </span>
           </h1>
-          <p className="text-xl text-gray-400">
+          <p className="text-xl text-gray-400 animate-fade-in opacity-0 animation-delay-100">
             Étudiant en BTS SIO option SISR - Spécialiste Infrastructure & Réseaux
           </p>
         </div>
 
         {/* Profile Section */}
-        <div className="relative bg-gradient-to-br from-blue-500/10 to-cyan-500/5 rounded-2xl border border-blue-500/20 p-8 mb-8 backdrop-blur-sm overflow-hidden">
+        <div className="relative bg-gradient-to-br from-blue-500/10 to-cyan-500/5 rounded-2xl border border-blue-500/20 p-8 mb-8 backdrop-blur-sm overflow-hidden animate-slide-up opacity-0 animation-delay-200">
           <div className="absolute inset-0" style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.1) 1px, transparent 0)',
             backgroundSize: '24px 24px'
@@ -53,7 +53,7 @@ export function APropos() {
         </div>
 
         {/* Formation */}
-        <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 rounded-2xl border border-blue-500/20 p-8 mb-8">
+        <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 rounded-2xl border border-blue-500/20 p-8 mb-8 animate-slide-right opacity-0 animation-delay-300">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/50">
               <GraduationCap className="w-6 h-6 text-white" />
@@ -82,7 +82,7 @@ export function APropos() {
         </div>
 
         {/* Experience */}
-        <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 rounded-2xl border border-blue-500/20 p-8 mb-8">
+        <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 rounded-2xl border border-blue-500/20 p-8 mb-8 animate-slide-left opacity-0 animation-delay-400">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/50">
               <Briefcase className="w-6 h-6 text-white" />
@@ -113,7 +113,7 @@ export function APropos() {
         </div>
 
         {/* Contact */}
-        <div className="relative bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl border border-blue-500/30 p-8 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl border border-blue-500/30 p-8 overflow-hidden animate-scale-in opacity-0 animation-delay-500">
           <div className="absolute inset-0" style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.15) 1px, transparent 0)',
             backgroundSize: '24px 24px'
@@ -144,7 +144,7 @@ export function APropos() {
                 <span className="text-gray-300 group-hover:text-white transition-colors">LinkedIn</span>
               </a>
               <a
-                href="https://github.com/votre-username"
+                href="https://github.com/yanisameur06"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800/70 transition-all border border-blue-500/20 hover:border-cyan-400/50 group"
@@ -152,7 +152,7 @@ export function APropos() {
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/50">
                   <Github className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-gray-300 group-hover:text-white transition-colors">GitHub</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors">GitHub - yanisameur06</span>
               </a>
             </div>
           </div>

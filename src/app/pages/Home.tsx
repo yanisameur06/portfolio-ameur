@@ -23,18 +23,18 @@ export function Home() {
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           {/* Nom et Prénom */}
-          <div className="inline-block bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm border border-blue-500/30 rounded-2xl px-8 py-4 mb-4">
+          <div className="inline-block bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm border border-blue-500/30 rounded-2xl px-8 py-4 mb-4 animate-slide-down opacity-0">
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
               Yanis Ameur
             </h2>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4 animate-fade-in opacity-0 animation-delay-100">
             <Sparkles className="w-4 h-4 text-cyan-400" />
             <span className="text-cyan-400 text-sm">BTS SIO Portfolio</span>
           </div>
-          
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up opacity-0 animation-delay-200">
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Bienvenue sur mon
             </span>
@@ -43,17 +43,17 @@ export function Home() {
               Portfolio Digital
             </span>
           </h1>
-          
-          <p className="text-xl text-gray-300 mb-4">
+
+          <p className="text-xl text-gray-300 mb-4 animate-fade-in opacity-0 animation-delay-300">
             Option SISR
           </p>
 
           {/* Dates */}
-          <div className="inline-block bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm border border-blue-500/30 rounded-xl px-6 py-3 mb-8">
+          <div className="inline-block bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm border border-blue-500/30 rounded-xl px-6 py-3 mb-8 animate-scale-in opacity-0 animation-delay-400">
             <span className="text-lg font-semibold text-cyan-400">2024 - 2026</span>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up opacity-0 animation-delay-500">
             <Link
               to="/projets"
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:from-blue-500 hover:to-cyan-500 transition-all shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/60"
@@ -71,13 +71,13 @@ export function Home() {
 
           {/* Section Présentation */}
           <div className="mt-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">
+            <h2 className="text-3xl font-bold text-center mb-8 animate-fade-in opacity-0 animation-delay-600">
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Présentation
               </span>
             </h2>
             <div className="grid md:grid-cols-3 gap-6 mb-6">
-              <div className="group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all overflow-hidden">
+              <div className="group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all overflow-hidden animate-slide-up opacity-0 animation-delay-700">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity">
                   <img 
                     src="https://images.unsplash.com/photo-1652212976547-16d7e2841b8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwdGVjaG5vbG9neSUyMGFic3RyYWN0JTIwYmx1ZXxlbnwxfHx8fDE3NzI4NjU5NDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -93,9 +93,9 @@ export function Home() {
                 </div>
               </div>
 
-              <div className="group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all overflow-hidden">
+              <div className="group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all overflow-hidden animate-slide-up opacity-0 animation-delay-800">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity">
-                  <img 
+                  <img
                     src="https://images.unsplash.com/photo-1762163516269-3c143e04175c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXJ2ZXIlMjBpbmZyYXN0cnVjdHVyZSUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzcyOTY5MjU0fDA&ixlib=rb-4.1.0&q=80&w=1080"
                     alt="Background"
                     className="w-full h-full object-cover"
@@ -109,7 +109,7 @@ export function Home() {
                 </div>
               </div>
 
-              <div className="group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all overflow-hidden">
+              <div className="group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all overflow-hidden animate-slide-up opacity-0" style={{ animationDelay: '900ms' }}>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity">
                   <img 
                     src="https://images.unsplash.com/photo-1762279389083-abf71f22d338?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwbmV0d29yayUyMGJsdWV8ZW58MXx8fHwxNzcyOTY5MjU1fDA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -127,7 +127,7 @@ export function Home() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all">
+              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all animate-slide-right opacity-0" style={{ animationDelay: '1000ms' }}>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-3">Entreprise d'accueil</h3>
                 <div className="flex items-center gap-4">
                   <img 
@@ -141,12 +141,12 @@ export function Home() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all">
+              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all animate-slide-left opacity-0" style={{ animationDelay: '1100ms' }}>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-3">Établissement scolaire</h3>
                 <div className="flex items-center gap-4">
-                  <img 
-                    src={lyceeLogo} 
-                    alt="Lycée Honoré d'Estienne d'Orves Logo" 
+                  <img
+                    src={lyceeLogo}
+                    alt="Lycée Honoré d'Estienne d'Orves Logo"
                     className="w-16 h-16 object-contain bg-white rounded-lg p-2"
                   />
                   <p className="text-gray-300 leading-relaxed">
@@ -158,14 +158,14 @@ export function Home() {
 
             {/* CV Section */}
             <div className="mt-6 max-w-3xl mx-auto">
-              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all">
+              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all animate-scale-in opacity-0" style={{ animationDelay: '1200ms' }}>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-3">Curriculum Vitae</h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
                   Téléchargez mon CV complet pour découvrir mon parcours, mes compétences et mes réalisations.
                 </p>
                 <a
-                  href="/cv-yanis-ameur.pdf"
-                  download="CV-Yanis-Ameur.pdf"
+                  href="/src/imports/CV_Yanis_Ameur.pdf"
+                  download="CV_Yanis_Ameur.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:from-blue-500 hover:to-cyan-500 transition-all shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/60"
                 >
                   <Download className="w-5 h-5" />

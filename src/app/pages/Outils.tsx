@@ -13,6 +13,7 @@ export function Outils() {
       name: "Système",
       icon: Server,
       color: "from-blue-500 to-cyan-600",
+      bgImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
       outils: [
         {
           name: "Windows Server",
@@ -38,6 +39,7 @@ export function Outils() {
       name: "Virtualisation",
       icon: HardDrive,
       color: "from-purple-500 to-indigo-600",
+      bgImage: "https://images.unsplash.com/photo-1667984390553-7f439e6ae401?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
       outils: [
         {
           name: "VMware / Hyper-V",
@@ -57,6 +59,7 @@ export function Outils() {
       name: "Réseau",
       icon: Network,
       color: "from-green-500 to-emerald-600",
+      bgImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
       outils: [
         {
           name: "Cisco Packet Tracer",
@@ -82,6 +85,7 @@ export function Outils() {
       name: "Scripting",
       icon: Terminal,
       color: "from-cyan-500 to-blue-600",
+      bgImage: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
       outils: [
         {
           name: "PowerShell",
@@ -95,6 +99,7 @@ export function Outils() {
       name: "Ticketing",
       icon: TicketCheck,
       color: "from-pink-500 to-rose-600",
+      bgImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
       outils: [
         {
           name: "GLPI",
@@ -121,18 +126,18 @@ export function Outils() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16 relative">
-          <div className="absolute inset-0 flex items-center justify-center opacity-30">
+          <div className="absolute inset-0 flex items-center justify-center opacity-30 animate-fade-in opacity-0">
             <div className="w-32 h-32 bg-blue-500/20 rounded-full blur-2xl"></div>
           </div>
-          <h1 className="text-6xl font-bold mb-6 relative">
+          <h1 className="text-6xl font-bold mb-6 relative animate-slide-down opacity-0 animation-delay-100">
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
               Outils & Technologies
             </span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto animate-fade-in opacity-0 animation-delay-200">
             Les outils et technologies que j'utilise au quotidien
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent mx-auto mt-6 animate-scale-in opacity-0 animation-delay-300"></div>
         </div>
 
         {/* Statistiques */}
@@ -140,8 +145,8 @@ export function Outils() {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className="relative group bg-gradient-to-br from-blue-500/10 to-cyan-500/5 rounded-2xl border border-blue-500/20 hover:border-cyan-400/50 transition-all duration-500 p-6 text-center overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="relative group bg-gradient-to-br from-blue-500/10 to-cyan-500/5 rounded-2xl border border-blue-500/20 hover:border-cyan-400/50 transition-all duration-500 p-6 text-center overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20 animate-scale-in opacity-0"
+              style={{ animationDelay: `${400 + index * 100}ms` }}
             >
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-cyan-500/0 group-hover:from-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>
@@ -169,7 +174,7 @@ export function Outils() {
             return (
               <div key={category.name} className="relative">
                 {/* Category Header */}
-                <div className="flex items-center gap-4 mb-8 group">
+                <div className="flex items-center gap-4 mb-8 group animate-slide-right opacity-0" style={{ animationDelay: `${800 + categoryIndex * 150}ms` }}>
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/40 group-hover:shadow-cyan-500/60 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
@@ -185,9 +190,18 @@ export function Outils() {
                   {category.outils.map((outil, index) => (
                     <div
                       key={outil.name}
-                      className="group relative bg-gradient-to-br from-slate-900/80 to-slate-800/50 backdrop-blur-sm rounded-2xl border border-blue-500/20 hover:border-cyan-400/60 transition-all duration-500 p-6 overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
-                      style={{ animationDelay: `${categoryIndex * 100 + index * 50}ms` }}
+                      className="group relative bg-gradient-to-br from-slate-900/80 to-slate-800/50 backdrop-blur-sm rounded-2xl border border-blue-500/20 hover:border-cyan-400/60 transition-all duration-500 p-6 overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20 animate-slide-up opacity-0"
+                      style={{ animationDelay: `${800 + categoryIndex * 200 + index * 100}ms` }}
                     >
+                      {/* Background Image */}
+                      <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                        <img
+                          src={category.bgImage}
+                          alt={category.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+
                       {/* Animated Background Gradient */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
 

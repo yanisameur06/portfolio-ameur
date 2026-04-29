@@ -1,4 +1,5 @@
-import { ExternalLink, Github, Network, Server, Phone, Cloud, Shield, Folder, TicketCheck } from "lucide-react";
+import { ExternalLink, Github, Network, Server, Phone, Cloud, Shield, Folder, TicketCheck, ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 
 export function Projets() {
   const categories = [
@@ -69,9 +70,10 @@ export function Projets() {
       color: "from-green-500 to-emerald-500",
       projects: [
         {
-          title: "Projet GSB - Installation et configuration GLPI",
-          description: "Projet scolaire GSB : installation et configuration complète de GLPI pour la gestion des incidents et demandes utilisateurs, incluant la création de la base de données, la configuration des catégories et la gestion des tickets.",
-          image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWxwZGVzayUyMHN1cHBvcnQlMjB0aWNrZXRpbmclMjBzeXN0ZW18ZW58MXx8fHwxNzMyODI3NjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+          title: "Projet GSB - Galaxy Swiss Bourdin",
+          description: "Projet d'infrastructure réseau complète pour un laboratoire pharmaceutique : segmentation VLAN, routage inter-VLAN, services GLPI et FTPS. Infrastructure complète avec 9 VLANs, switches Cisco et virtualisation Proxmox.",
+          image: "https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
+          link: "/projet-gsb",
         },
       ],
     },
@@ -98,21 +100,21 @@ export function Projets() {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16 relative">
-          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-          <h1 className="text-6xl font-bold mb-6 relative">
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent animate-pulse">
+          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-fade-in"></div>
+          <h1 className="text-6xl font-bold mb-6 relative animate-slide-down opacity-0">
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               Projets Réalisés
             </span>
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mt-8">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mt-8 animate-fade-in opacity-0 animation-delay-100">
             Découvrez les différents projets techniques que j'ai réalisés en entreprise
           </p>
         </div>
 
         {/* Stats Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
-          <div className="group relative bg-gradient-to-br from-blue-500/20 to-cyan-500/10 backdrop-blur-xl border border-blue-500/30 rounded-2xl p-8 hover:border-cyan-400/70 transition-all hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105 text-center overflow-hidden">
+          <div className="group relative bg-gradient-to-br from-blue-500/20 to-cyan-500/10 backdrop-blur-xl border border-blue-500/30 rounded-2xl p-8 hover:border-cyan-400/70 transition-all hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105 text-center overflow-hidden animate-scale-in opacity-0 animation-delay-200">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-cyan-500/0 group-hover:from-blue-500/10 group-hover:to-cyan-500/20 transition-all"></div>
             <div className="relative z-10">
               <div className="text-6xl font-bold bg-gradient-to-br from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform">
@@ -165,42 +167,54 @@ export function Projets() {
 
                 {/* Projects Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.projects.map((project, projIndex) => (
-                    <div
-                      key={projIndex}
-                      className="group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/5 rounded-2xl overflow-hidden border border-blue-500/30 hover:border-cyan-400/70 transition-all hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-2"
-                    >
-                      {/* Animated Border Glow */}
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-cyan-500/20 to-blue-500/20 blur-xl"></div>
-                      </div>
+                  {category.projects.map((project, projIndex) => {
+                    const ProjectWrapper = (project as any).link ? Link : 'div';
+                    const wrapperProps = (project as any).link ? { to: (project as any).link } : {};
 
-                      <div className="relative z-10">
-                        {/* Image */}
-                        <div className="aspect-video overflow-hidden bg-slate-800/50 relative">
-                          <img
-                            src={project.image}
-                            alt={project.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    return (
+                      <ProjectWrapper
+                        key={projIndex}
+                        {...wrapperProps}
+                        className="group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/5 rounded-2xl overflow-hidden border border-blue-500/30 hover:border-cyan-400/70 transition-all hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-2 block"
+                      >
+                        {/* Animated Border Glow */}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-cyan-500/20 to-blue-500/20 blur-xl"></div>
                         </div>
 
-                        {/* Content */}
-                        <div className="p-6 backdrop-blur-sm">
-                          <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors line-clamp-2">
-                            {project.title}
-                          </h3>
-                          <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
-                            {project.description}
-                          </p>
-                        </div>
+                        <div className="relative z-10">
+                          {/* Image */}
+                          <div className="aspect-video overflow-hidden bg-slate-800/50 relative">
+                            <img
+                              src={project.image}
+                              alt={project.title}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            {(project as any).link && (
+                              <div className="absolute top-4 right-4 bg-blue-500/80 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+                                Voir détails
+                                <ArrowRight className="w-3.5 h-3.5" />
+                              </div>
+                            )}
+                          </div>
 
-                        {/* Corner Accent */}
-                        <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                      </div>
-                    </div>
-                  ))}
+                          {/* Content */}
+                          <div className="p-6 backdrop-blur-sm">
+                            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors line-clamp-2">
+                              {project.title}
+                            </h3>
+                            <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
+                              {project.description}
+                            </p>
+                          </div>
+
+                          {/* Corner Accent */}
+                          <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        </div>
+                      </ProjectWrapper>
+                    );
+                  })}
                 </div>
               </div>
             );
